@@ -77,6 +77,7 @@ Aşağıdaki adımlar, projenin yerel bilgisayarınızda çalıştırılması i�
 4.  Önerilen filmlerin altındaki **✅ İzledim** butonuna basın. Bu filmin artık size önerilmeyeceğini kontrol edin.
 5.  Farklı bir sorgu yapın ve chatbot'un yeni filtrelere uygun öneri getirdiğini doğrulayın.
 6.  Yeni bir sorgu yapıldığında eski sorgunuz silinmeyecektir, sayfanın en altına gittiğinizde yeni sorgunuzun da cevabını aynı sayfada görmeniz mümkündür.
-7.  Sayfanın sonunda eğer izedime bastıysanız izlediğiniz filmler gözükür.
+7.  Sayfanın sonunda eğer izledime bastıysanız izlediğiniz filmler gözükür.
+
 
 
