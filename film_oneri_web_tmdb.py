@@ -13,17 +13,21 @@ import requests          # TMDB API çağrıları için
 import time              # API çağrıları arasında bekleme için
 import random            # Alternatif tür seçmek için
 
-# ---------------------------------------------------------------
-# 🔧 TMDB API AYARLARI
-# ---------------------------------------------------------------
 
-python<br># ---------------------------------------------------------------<br>
-# 🔧 TMDB API AYARLARI (Streamlit Secrets Kullanımı)<br># ---------------------------------------------------------------<br>
-# TMDB anahtarını st.secrets'tan oku<br>if "TMDB_API_KEY" in st.secrets:<br> TMDB_API_KEY = st.secrets["TMDB_API_KEY"]<br>else:<br> 
-# Anahtar secrets'ta yoksa hata ver<br> st.error("⚠️ TMDB_API_KEY Streamlit Secrets'ta tanımlı değil!")<br> st.stop() 
-# Uygulamayı durdur<br><br>API_KEY = TMDB_API_KEY # TMDB API anahtarı<br>BASE_URL = "https://api.themoviedb.org/3"
-# TMDB temel URL<br>IMAGE_BASE = "https://image.tmdb.org/t/p/w500" 
-# Poster görselleri için URL<br>
+# ---------------------------------------------------------------
+# 🔧 TMDB API AYARLARI (Streamlit Secrets Kullanımı)
+# ---------------------------------------------------------------
+# TMDB anahtarını st.secrets'tan oku
+if "TMDB_API_KEY" in st.secrets:
+    TMDB_API_KEY = st.secrets["TMDB_API_KEY"]
+else:
+    # Anahtar secrets'ta yoksa hata ver
+    st.error("⚠️ TMDB_API_KEY Streamlit Secrets'ta tanımlı değil!")
+    st.stop() # Uygulamayı durdur
+
+API_KEY = TMDB_API_KEY  # TMDB API anahtarı
+BASE_URL = "https://api.themoviedb.org/3"  # TMDB temel URL
+IMAGE_BASE = "https://image.tmdb.org/t/p/w500"  # Poster görselleri için URL
 # ---------------------------------------------------------------
 # 🔑 Tür kelime -> TMDB ID eşlemesi
 # ---------------------------------------------------------------
@@ -225,3 +229,4 @@ if __name__ == "__main__":
 
 
 #python -m streamlit run film_oneri_web_tmdb.py ÇALIŞTIRMAK İÇİN
+
