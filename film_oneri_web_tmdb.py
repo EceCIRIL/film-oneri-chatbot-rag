@@ -16,16 +16,14 @@ import random            # Alternatif tür seçmek için
 # ---------------------------------------------------------------
 # 🔧 TMDB API AYARLARI
 # ---------------------------------------------------------------
-try:
-    from config import TMDB_API_KEY  # config.py içinden anahtarı al
-except ImportError:
-    TMDB_API_KEY = None
-    raise ValueError("⚠️ config.py dosyasında TMDB_API_KEY tanımlı değil!")
 
-API_KEY = TMDB_API_KEY  # TMDB API anahtarı
-BASE_URL = "https://api.themoviedb.org/3"  # TMDB temel URL
-IMAGE_BASE = "https://image.tmdb.org/t/p/w500"  # Poster görselleri için URL
-
+python<br># ---------------------------------------------------------------<br>
+# 🔧 TMDB API AYARLARI (Streamlit Secrets Kullanımı)<br># ---------------------------------------------------------------<br>
+# TMDB anahtarını st.secrets'tan oku<br>if "TMDB_API_KEY" in st.secrets:<br> TMDB_API_KEY = st.secrets["TMDB_API_KEY"]<br>else:<br> 
+# Anahtar secrets'ta yoksa hata ver<br> st.error("⚠️ TMDB_API_KEY Streamlit Secrets'ta tanımlı değil!")<br> st.stop() 
+# Uygulamayı durdur<br><br>API_KEY = TMDB_API_KEY # TMDB API anahtarı<br>BASE_URL = "https://api.themoviedb.org/3"
+# TMDB temel URL<br>IMAGE_BASE = "https://image.tmdb.org/t/p/w500" 
+# Poster görselleri için URL<br>
 # ---------------------------------------------------------------
 # 🔑 Tür kelime -> TMDB ID eşlemesi
 # ---------------------------------------------------------------
@@ -222,6 +220,7 @@ def main():
 # ---------------------------------------------------------------
 if __name__ == "__main__":
     main()
+
 
 
 
